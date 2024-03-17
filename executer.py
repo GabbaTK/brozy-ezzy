@@ -33,3 +33,5 @@ def execute(code):
 
         elif line[0] == "INPUT":
             returns = input()
+        elif line[0] == "STR":
+            returns = " ".join(line[1:])

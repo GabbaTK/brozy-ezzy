@@ -2,7 +2,8 @@ from tokenizer import tokenize
 from compiler import compile
 from executer import execute
 
-code = ["var hi = inp()\n", "prt(hi)\n"]
+with open(input("Enter program file name (WITH EXTENSION) >>>"), "r") as file:
+    code = file.readlines()
 
 tokens = tokenize(code)
 compiledCode = compile(tokens)
